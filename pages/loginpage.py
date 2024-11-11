@@ -45,10 +45,10 @@ def on_focus_out(event, placeholder):
         event.widget.config(fg="gray")
 
 
-window = tk.Tk()
-window.title("Login e Cadastro")
-window.geometry("800x400")
-window.configure(bg="#1B1B1D")
+login_page = tk.Tk()
+login_page.title("Login e Cadastro")
+login_page.geometry("800x400")
+login_page.configure(bg="#1B1B1D")
 
 # Cores
 emphasis = "#00ACC1"
@@ -57,11 +57,11 @@ text_color = "#E0F7FA"
 button_color = "#1B1B1D"
 button_text_color = "#00ACC1"
 
-left_frame = tk.Frame(window, bg=emphasis, width=400, height=400)
+left_frame = tk.Frame(login_page, bg=emphasis, width=400, height=400)
 left_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
 # Frame direito - Entrar
-right_frame = tk.Frame(window, bg=bg_color, width=400, height=400)
+right_frame = tk.Frame(login_page, bg=bg_color, width=400, height=400)
 right_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
 
 # Configuração para o texto grande
@@ -139,4 +139,7 @@ def executar_login():
 
 cadastrar_button.config(command=executar_cadastro)
 entrar_button.config(command=executar_login)
-window.mainloop()
+
+if __name__ == '__main__':
+
+    login_page.mainloop()

@@ -1,4 +1,3 @@
-# quero importar os valores digitados pelo usuario
 def teste(nome, email, senha):
     if nome and email and senha:
 
