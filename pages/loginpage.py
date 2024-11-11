@@ -1,7 +1,7 @@
 
 
 import tkinter as tk
-
+import subprocess
 import sys
 import os
 try:
@@ -10,9 +10,11 @@ try:
     from auth.login import teste, teste_login
 except Exception as e:
     print(e)
-
+from tkinter import messagebox
 
 # Função para placeholder
+
+
 def create_rounded_entry(parent, placeholder):
     entry_frame = tk.Frame(parent, bg="white", bd=0)
     entry_frame.pack(pady=(5, 10))
@@ -131,9 +133,12 @@ def executar_login():
     if (email.lower() != 'email' and senha.lower() != 'senha'):
 
         if teste_login(email, senha):
-            print("Login realizado com sucesso!")
+
+            login_page.destroy()
+            subprocess.run(["python", "pages/dashboardpage.py"])
             return
-    print("Falha no Login.")
+
+    messagebox.showinfo('Falha no login', 'Credenciais inválidas')
     return
 
 
