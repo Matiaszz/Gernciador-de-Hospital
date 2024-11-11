@@ -93,6 +93,7 @@ cadastrar_button = tk.Button(
     left_inner_frame, text="CADASTRAR", font=("Arial", 14, "bold"),
     bg=button_color, fg=button_text_color, relief="flat",
     activebackground=button_color, activeforeground=button_text_color,
+    cursor='hand2'
 )
 cadastrar_button.pack(pady=20)
 
@@ -108,7 +109,7 @@ senha_login_entry = create_rounded_entry(right_inner_frame, "Senha")
 entrar_button = tk.Button(
     right_inner_frame, text="ENTRAR", font=("Arial", 14, "bold"), bg="white",
     fg=bg_color, relief="flat", activebackground="white",
-    activeforeground=bg_color
+    activeforeground=bg_color, cursor='hand2'
 )
 entrar_button.pack(pady=20)
 
